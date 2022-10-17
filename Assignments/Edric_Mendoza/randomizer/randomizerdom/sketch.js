@@ -22,9 +22,9 @@ let memes = [];
 let imageCounter = 0;
 let button;
 
-function preload() {
-  for (let i = 0; i <= 5; I++) {
-    memes[i] = loadImage(`assests/meme_${i}.JPG`)
+function preload(){
+  for (let i = 0; i <= 4; i++) {
+    memes[i] = loadImage(`assets/meme_${i}.JPG`)
   }
 
 }
@@ -100,7 +100,7 @@ function randomizer() {
     clear();
     randomIndex = int(random(cars.length));
     image(random(memes), width / 2, height / 2);
-    text(`${cars[randomIndex].name} is ${cars[randomIndex].color}`, width/2, height - 25);
+    text(cars[randomIndex].name, width/2, height - 25);
     // text(cars[randomIndex].name + " is " + cars[randomIndex].color, 50, 50);
     cars.splice(randomIndex, 1);
   } else {
